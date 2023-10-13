@@ -34,8 +34,8 @@
     left: 50.1%;
   }
   .inside {
-    background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
-    line-height: 3;
+    background: linear-gradient(to right, #ebb7f5, #efd3f5 30%);
+    line-height: 2;
     padding: 0 20px;
     text-align: center;
     display: flex;
@@ -62,16 +62,16 @@
     transform: rotateX(0deg);
   }
   .front {
-    background-color: #ffffff;
+    background-color: #ebb7f5;
   }
   .back {
     transform: rotateY(180deg);
-    background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+    background: linear-gradient(to left, #ebb7f5, #efd3f5 30%);
   }
   .cake {
     width: 100%;
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
   }
   .top-layer,
   .middle-layer,
