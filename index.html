@@ -42,34 +42,38 @@
         </div>
         <script>
             function showConfetti() {
+                var scalar = 2
+                var heart = confetti.shapeFromText({ text: '❤️', scalar })
+
                 var defaults = {
                     spread: 360,
-                    ticks: 50,
+                    ticks: 60,
                     gravity: 0,
-                    decay: 0.94,
-                    startVelocity: 30,
-                    colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8']
+                    decay: 0.96,
+                    startVelocity: 20,
+                    shapes: [heart],
+                    scalar
                 }
 
                 function shoot() {
                     confetti({
                         ...defaults,
-                        particleCount: 40,
-                        scalar: 1.2,
-                        shapes: ['star']
+                        particleCount: 30
                     })
 
                     confetti({
                         ...defaults,
-                        particleCount: 10,
-                        scalar: 0.75,
-                        shapes: ['circle']
+                        particleCount: 5,
+                        flat: true
                     })
                 }
 
                 setTimeout(shoot, 0)
                 setTimeout(shoot, 100)
                 setTimeout(shoot, 200)
+                setTimeout(shoot, 300)
+                setTimeout(shoot, 400)
+                setTimeout(shoot, 500)
             }
         </script>
         <script>
@@ -83,7 +87,6 @@
             class Birthday {
                 constructor() {
                     this.resize()
-
                     // create a lovely place to store the firework
                     this.fireworks = []
                     this.counter = 0
